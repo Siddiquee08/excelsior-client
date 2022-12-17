@@ -3,7 +3,9 @@ import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 import logo from "../../../asset/images.png";
+import "./Navbar.css";
 
 const Navigationbar = () => {
   const [theme, setTheme] = useState(false);
@@ -18,25 +20,47 @@ const Navigationbar = () => {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <img
-            className="rounded me-2"
-            src={logo}
-            alt=""
-            style={{ width: "10vw" }}
-          />
-          <Navbar.Brand href="#home">Excelsior</Navbar.Brand>
+          <Link to="/">
+            <img
+              className="rounded me-2"
+              src={logo}
+              alt=""
+              style={{ width: "10vw" }}
+            />
+          </Link>
+
+          <Navbar.Brand href="#home">
+            <Link to="/" className="text-white">
+              Excelsior
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Courses</Nav.Link>
-              <Nav.Link href="#pricing">FAQ</Nav.Link>
+              <Nav.Link href="#features" className="text-white">
+                Courses
+              </Nav.Link>
+              <Nav.Link href="#pricing" className="text-white">
+                FAQ
+              </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
+              <Nav.Link href="#blogs">
+                <Link to="/blogs" className="text-white" href="#">
+                  Blogs
+                </Link>
               </Nav.Link>
-              <Button variant={theme ? "light" : "dark"} onClick={toggle}>
+
+              <Nav.Link href="#upcoming">
+                <Link to="/upcoming" className="text-white">
+                  Upcoming
+                </Link>
+              </Nav.Link>
+              <Button
+                variant={theme ? "light" : "dark"}
+                onClick={toggle}
+                className={theme ? "bg-white" : "bg-warning"}
+              >
                 {theme ? "Light" : "Dark"}
               </Button>
             </Nav>
