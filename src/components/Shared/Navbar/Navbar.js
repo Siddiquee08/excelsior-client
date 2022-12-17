@@ -50,6 +50,16 @@ const Navigationbar = () => {
                   Blogs
                 </Link>
               </Nav.Link>
+              <Nav.Link>
+                <Link to="/login" className="text-white" href="#">
+                  Log in
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/register" className="text-white" href="#">
+                  Register
+                </Link>
+              </Nav.Link>
 
               <Nav.Link href="#upcoming">
                 <Link to="/upcoming" className="text-white">

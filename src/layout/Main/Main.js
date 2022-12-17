@@ -10,16 +10,7 @@ const Main = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <Container>
-        <Row>
-          <Col lg="4">
-            <LeftSideMenu></LeftSideMenu>
-          </Col>
-          <Col lg="8">
-            <Outlet></Outlet>
-          </Col>
-        </Row>
-      </Container>
+      <Outlet></Outlet>
       <Footer></Footer>
     </div>
   );
