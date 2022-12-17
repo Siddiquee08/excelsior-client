@@ -2,8 +2,10 @@ import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../../layout/Main/Main";
 import Blogs from "../../Blogs/Blogs";
-import Categories from "../../Categories/Categories";
 import CourseDetails from "../../CourseContent/CourseDetails";
+import Courses from "../../CourseContent/Courses";
+import CourseSummaryCard from "../../CourseContent/CourseSummaryCard";
+import Faq from "../../FAQ/Faq";
 import Home from "../../Home/Home";
 import Register from "../../Signups/Register/Register";
 import SignIn from "../../Signups/SignIn/SignIn";
@@ -18,11 +20,15 @@ export const routes = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/category/:id",
-        element: <Categories></Categories>,
+        path: "/courses",
+        element: <Courses></Courses>,
       },
       {
         path: "/courses/:id",
+        element: <Courses></Courses>,
+      },
+      {
+        path: "/details/:id",
         element: <CourseDetails></CourseDetails>,
       },
       {
@@ -38,8 +44,8 @@ export const routes = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/categories",
-        element: <Categories></Categories>,
+        path: "/faq",
+        element: <Faq></Faq>,
       },
     ],
   },

@@ -1,11 +1,16 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const LeftSideMenu = ({ category }) => {
-  const { name } = category;
+  const { id, name } = category;
   return (
-    <div>
-      <Link>{name}</Link>
+    <div className="mt-3 d-inline d-lg-block">
+      <Button variant="success m-1">
+        <Link to={`/courses/${id}`} className="text-white text-decoration-none">
+          {name}
+        </Link>
+      </Button>
     </div>
   );
 };

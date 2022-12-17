@@ -37,19 +37,23 @@ const Navigationbar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features" className="text-white">
-                Courses
+              <Nav.Link href="#features">
+                <Link to="/courses" className="text-white">
+                  Courses
+                </Link>
               </Nav.Link>
               <Nav.Link href="#pricing" className="text-white">
-                FAQ
+                <Link to="/faq" className="text-white">
+                  FAQ
+                </Link>
               </Nav.Link>
-            </Nav>
-            <Nav>
               <Nav.Link href="#blogs">
                 <Link to="/blogs" className="text-white" href="#">
                   Blogs
                 </Link>
               </Nav.Link>
+            </Nav>
+            <Nav>
               <Nav.Link>
                 <Link to="/login" className="text-white" href="#">
                   Log in
@@ -58,11 +62,6 @@ const Navigationbar = () => {
               <Nav.Link>
                 <Link to="/register" className="text-white" href="#">
                   Register
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link to="/categories" className="text-white" href="#">
-                  Categories
                 </Link>
               </Nav.Link>
 
@@ -75,6 +74,7 @@ const Navigationbar = () => {
                 variant={theme ? "light" : "dark"}
                 onClick={toggle}
                 className={theme ? "bg-white" : "bg-warning"}
+                style={{ borderRadius: "25px" }}
               >
                 {theme ? "Light" : "Dark"}
               </Button>
