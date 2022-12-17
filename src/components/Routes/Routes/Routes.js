@@ -37,6 +37,10 @@ export const routes = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path: "/categories",
+        element: <Categories></Categories>,
+      },
     ],
   },
   {

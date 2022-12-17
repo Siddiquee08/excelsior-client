@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const LeftSideMenu = () => {
+const LeftSideMenu = ({ category }) => {
+  const { name } = category;
   return (
     <div>
-      <h2>Left Side Menu</h2>
+      <Link>{name}</Link>
     </div>
   );
 };

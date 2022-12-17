@@ -60,6 +60,11 @@ const Navigationbar = () => {
                   Register
                 </Link>
               </Nav.Link>
+              <Nav.Link>
+                <Link to="/categories" className="text-white" href="#">
+                  Categories
+                </Link>
+              </Nav.Link>
 
               <Nav.Link href="#upcoming">
                 <Link to="/upcoming" className="text-white">
