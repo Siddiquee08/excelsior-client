@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import LeftSideMenu from "../Shared/LeftsideMenu/LeftSideMenu";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import CourseSummaryCard from "./CourseSummaryCard";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Courses = () => {
+  const courseSummary = useLoaderData();
+  console.log(courseSummary);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/courseCategories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
-  console.log(categories);
   return (
     <div>
       <Container>
