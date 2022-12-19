@@ -5,11 +5,18 @@ const CheckOut = () => {
   const course = useLoaderData();
   console.log(course);
   return (
-    <div className="container text-center my-5">
-      <h2 className="fs-4">
-        Your Chosen Course:{" "}
-        <small className="text-success">{course.title} </small>
-      </h2>
+    <div className="container my-5">
+      <div>
+        <h2 className="fs-4">
+          Your Chosen Course:{" "}
+          <small className="text-success">{course.title} </small>
+        </h2>
+      </div>
+      <div>
+        <h2>
+          Duration: <small>{course.duration}</small>
+        </h2>
+      </div>
     </div>
   );
 };
