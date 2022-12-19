@@ -3,6 +3,7 @@ import LeftSideMenu from "../Shared/LeftsideMenu/LeftSideMenu";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import CourseSummaryCard from "./CourseSummaryCard";
 import { Link, useLoaderData } from "react-router-dom";
+import "./Courses.css";
 
 const Courses = () => {
   const courseSummary = useLoaderData();
@@ -29,8 +30,13 @@ const Courses = () => {
             ))}
           </Col>
           <Col lg="9">
-            <div>
-              <CourseSummaryCard></CourseSummaryCard>
+            <div className="d-flex">
+              {courseSummary.map((course) => (
+                <CourseSummaryCard
+                  key={course.category_id}
+                  course={course}
+                ></CourseSummaryCard>
+              ))}
             </div>
           </Col>
         </Row>
