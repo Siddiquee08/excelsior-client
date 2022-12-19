@@ -1,12 +1,13 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const CourseDetails = () => {
   const details = useLoaderData();
   console.log(details);
-  const { title, picture, description } = details;
+  const { _id, title, picture, description } = details;
   return (
     <div className="container mt-5">
       <CardGroup>
@@ -16,8 +17,15 @@ const CourseDetails = () => {
             <Card.Title>{title}</Card.Title>
             <Card.Text>{description}</Card.Text>
           </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
+          <Card.Footer className="text-center">
+            <Button variant="dark">
+              <Link
+                to={`/checkout/${_id}`}
+                className=" text-white text-decoration-none"
+              >
+                Checkout
+              </Link>
+            </Button>
           </Card.Footer>
         </Card>
       </CardGroup>
