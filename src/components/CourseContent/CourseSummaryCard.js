@@ -7,8 +7,8 @@ const CourseSummaryCard = ({ course }) => {
   const { _id, title, description, picture } = course;
   return (
     <div className="mt-3 summary">
-      <Card className="">
-        <Card.Img variant="top" src={picture} />
+      <Card className="me-2">
+        <Card.Img variant="top" src={picture} style={{ height: "30vh" }} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>

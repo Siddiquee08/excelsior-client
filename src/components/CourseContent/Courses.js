@@ -32,7 +32,7 @@ const Courses = () => {
             </div>
           </Col>
           <Col lg="8">
-            <div className="d-md-flex">
+            <div className="d-md-flex container">
               {courseSummary.map((course, index) => (
                 <CourseSummaryCard
                   key={index}
