@@ -5,7 +5,6 @@ import Blogs from "../../Blogs/Blogs";
 import CheckOut from "../../CheckOut/CheckOut";
 import CourseDetails from "../../CourseContent/CourseDetails";
 import Courses from "../../CourseContent/Courses";
-import CourseSummaryCard from "../../CourseContent/CourseSummaryCard";
 import Faq from "../../FAQ/Faq";
 import Home from "../../Home/Home";
 import Register from "../../Signups/Register/Register";

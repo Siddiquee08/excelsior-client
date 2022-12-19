@@ -20,7 +20,7 @@ const Courses = () => {
         <Row>
           <Col lg="4">
             <div className="">
-              <h3 className="ms-3 text-decoration-underline">
+              <h3 className="text-decoration-underline">
                 Click and choose from: {categories.length} catgories
               </h3>
               {categories.map((category) => (
