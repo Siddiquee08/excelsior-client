@@ -16,12 +16,19 @@ const Home = () => {
     loop: 5,
   });
   return (
-    <div className="container d-flex mt-2">
+    <div className="container d-flex mt-2 justify-content-center align-items-center">
       <div className="mt-2 w-75">
-        <img className="img-fluid" src={header} alt="" />
+        <lottie-player
+          src="https://assets9.lottiefiles.com/packages/lf20_9ungcrzx.json"
+          background="transparent"
+          speed="1"
+          style={{ width: "300px", height: "300px" }}
+          loop
+          autoplay
+        ></lottie-player>
       </div>
       <div className="">
-        <h2 className="fs-1 mt-5 ms-2">
+        <h2 className="fs-1 mt-5">
           Learn in- demand skills and{" "}
           <span className="text-success">{text}</span>
         </h2>
