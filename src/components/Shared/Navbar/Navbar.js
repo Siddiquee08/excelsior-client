@@ -38,7 +38,7 @@ const Navigationbar = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#features">
-                <Link to="/courses" className="text-white">
+                <Link to="/courses/:id" className="text-white">
                   Courses
                 </Link>
               </Nav.Link>
