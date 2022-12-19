@@ -2,13 +2,14 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "react-router-dom";
+import "./Courses.css";
 const CourseSummaryCard = ({ course }) => {
   const { _id, title, description, picture } = course;
   return (
-    <div className="mt-3">
+    <div className="mt-3 summary">
       <CardGroup className="mb-3">
-        <Card className="me-2">
-          <Card.Img variant="top" src={picture} />
+        <Card className="m-2">
+          <Card.Img variant="top" className="p-1" src={picture} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>

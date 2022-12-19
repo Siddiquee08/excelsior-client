@@ -15,22 +15,24 @@ const Courses = () => {
       .then((data) => setCategories(data));
   }, []);
   return (
-    <div>
-      <Container>
+    <div className="mt-3">
+      <>
         <Row>
-          <Col lg="3">
-            <h3 className="ms-3 text-decoration-underline">
-              Total Categoires: {categories.length}
-            </h3>
-            {categories.map((category) => (
-              <LeftSideMenu
-                key={category.id}
-                category={category}
-              ></LeftSideMenu>
-            ))}
+          <Col lg="4">
+            <div className="">
+              <h3 className="ms-3 text-decoration-underline">
+                Click and choose from: {categories.length} catgories
+              </h3>
+              {categories.map((category) => (
+                <LeftSideMenu
+                  key={category.id}
+                  category={category}
+                ></LeftSideMenu>
+              ))}
+            </div>
           </Col>
-          <Col lg="9">
-            <div className="d-flex">
+          <Col lg="8">
+            <div className="d-md-flex">
               {courseSummary.map((course) => (
                 <CourseSummaryCard
                   key={course.category_id}
@@ -40,7 +42,7 @@ const Courses = () => {
             </div>
           </Col>
         </Row>
-      </Container>
+      </>
     </div>
   );
 };

@@ -13,12 +13,12 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <CDBFooter className="shadow fixed-bottom">
+    <CDBFooter className="shadow bottom mt-5 footer">
       <CDBBox
         display="flex"
         justifyContent="around"
         alignItems="center"
-        className="mx-auto py-4 flex-wrap"
+        className="mx-auto flex-wrap"
       >
         <CDBBox display="flex" alignItems="center">
           <Link to="/" className="d-flex align-items-center p-0 text-dark">
