@@ -33,9 +33,9 @@ const Courses = () => {
           </Col>
           <Col lg="8">
             <div className="d-md-flex">
-              {courseSummary.map((course) => (
+              {courseSummary.map((course, index) => (
                 <CourseSummaryCard
-                  key={course.category_id}
+                  key={index}
                   course={course}
                 ></CourseSummaryCard>
               ))}
