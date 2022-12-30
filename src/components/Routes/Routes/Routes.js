@@ -9,6 +9,7 @@ import Faq from "../../FAQ/Faq";
 import Home from "../../Home/Home";
 import Register from "../../Signups/Register/Register";
 import SignIn from "../../Signups/SignIn/SignIn";
+import PrivateRoute from "./PrivateRout/PrivateRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/checkout/:id",
-        element: <CheckOut></CheckOut>,
+        element: (
+          <PrivateRoute>
+            <CheckOut></CheckOut>
+          </PrivateRoute>
+        ),
         loader: ({ params }) => {
           return fetch(`http://localhost:5000/details/${params.id}`);
         },

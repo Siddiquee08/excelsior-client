@@ -10,6 +10,7 @@ const Register = () => {
     email: "",
     password: "",
   });
+  const [error, setError] = useState("");
   const handleName = (event) => {
     setUserInfo({ ...userInfo, name: event.target.value });
   };
@@ -29,8 +30,12 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setError("");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        setError(error.message);
+        console.error(error);
+      });
   };
   return (
     <div>
@@ -77,6 +82,7 @@ const Register = () => {
               onChange={handlePassword}
             />
           </Form.Group>
+          <p className="text-danger">{error}</p>
           <Button
             className="me-3"
             variant="primary"

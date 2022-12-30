@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 
 const CheckOut = () => {
   const course = useLoaderData();
-  console.log(course);
   return (
     <div className="container my-5">
       <div>

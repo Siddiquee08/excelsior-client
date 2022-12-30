@@ -3,15 +3,17 @@ import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { FaGoogle, FaGithub } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import "./SignIn.css";
 
 const SignIn = () => {
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
   const googleProvider = new GoogleAuthProvider();
   const { providerLogin, signIn } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -22,9 +24,13 @@ const SignIn = () => {
         const user = result.user;
         console.log(user);
         form.reset();
-        navigate("/");
+        setError("");
+        navigate(from, { replace: true });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+      });
   };
   const googleSignIn = () => {
     providerLogin(googleProvider)
@@ -33,12 +39,7 @@ const SignIn = () => {
         console.log(user);
       })
       .catch((error) => {
-        const errorMessage = error.message;
-        if (!error) {
-          setError(errorMessage);
-        } else {
-          setError("");
-        }
+        console.error(error);
       });
   };
   return (
@@ -69,6 +70,9 @@ const SignIn = () => {
           </p>
         </Form.Text>
 
+        <Form.Text className="text-danger">
+          <p className="mt-3">{error}</p>
+        </Form.Text>
         <Button variant="primary" type="submit">
           Log In
         </Button>
@@ -78,9 +82,6 @@ const SignIn = () => {
         <Button variant="dark">
           <FaGithub className="m-1"></FaGithub>
         </Button>
-        <Form.Text className="text-muted">
-          <p className="mt-3">{error?.message}</p>
-        </Form.Text>
       </Form>
     </div>
   );
