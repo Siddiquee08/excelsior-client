@@ -21,7 +21,7 @@ const Home = () => {
             src="https://assets9.lottiefiles.com/packages/lf20_9ungcrzx.json"
             background="transparent"
             speed="1"
-            style={{ height: "500px" }}
+            style={{ height: "400px" }}
             loop
             autoplay
           ></lottie-player>

@@ -1,13 +1,16 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import React, { useContext, useState } from "react";
+import { Button, Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { FaUserAlt, FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../../../asset/images.png";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import "./Navbar.css";
 
 const Navigationbar = () => {
+  const { user } = useContext(AuthContext);
   const [theme, setTheme] = useState(false);
   const toggle = () => {
     if (!theme) {
@@ -69,6 +72,17 @@ const Navigationbar = () => {
                 <Link to="/upcoming" className="text-white">
                   Upcoming
                 </Link>
+              </Nav.Link>
+              <Nav.Link className="text-white">
+                {user?.photoURL ? (
+                  <Image
+                    roundedCircle
+                    src={user.photoURL}
+                    style={{ height: "40px" }}
+                  ></Image>
+                ) : (
+                  <FaUserCircle></FaUserCircle>
+                )}
               </Nav.Link>
               <Button
                 variant={theme ? "light" : "dark"}

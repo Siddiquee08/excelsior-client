@@ -1,11 +1,25 @@
-import React from "react";
+import { GoogleAuthProvider } from "firebase/auth";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import "./SignIn.css";
 
 const SignIn = () => {
+  const googleProvider = new GoogleAuthProvider();
+  const { providerLogin } = useContext(AuthContext);
+  const googleSignIn = () => {
+    providerLogin(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div className=" my-4">
       <Form className="container w-75">
@@ -26,10 +40,10 @@ const SignIn = () => {
         <Button variant="primary" type="submit">
           Log In
         </Button>
-        <Button className="m-1" variant="success" type="submit">
+        <Button className="m-1" variant="success" onClick={googleSignIn}>
           <FaGoogle className="m-1"></FaGoogle>
         </Button>
-        <Button variant="dark" type="submit">
+        <Button variant="dark">
           <FaGithub className="m-1"></FaGithub>
         </Button>
       </Form>
