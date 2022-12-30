@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 const Blogs = () => {
   return (
-    <div className="container text-center">
+    <div className="container text-center my-5">
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>What is CORS?</Accordion.Header>

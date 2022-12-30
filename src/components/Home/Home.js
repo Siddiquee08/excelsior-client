@@ -3,8 +3,6 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useTypewriter } from "react-simple-typewriter";
 
-import header from "../../asset/pexels-photo-1779487.webp";
-
 const Home = () => {
   const [text] = useTypewriter({
     words: [
@@ -17,13 +15,13 @@ const Home = () => {
   });
   return (
     <div>
-      <div className="container d-md-flex mt-2 align-items-center">
+      <div className=" container d-md-flex mt-2 align-items-center justify-content-center">
         <div className="mt-2">
           <lottie-player
             src="https://assets9.lottiefiles.com/packages/lf20_9ungcrzx.json"
             background="transparent"
             speed="1"
-            style={{ width: "500px", height: "300px" }}
+            style={{ height: "500px" }}
             loop
             autoplay
           ></lottie-player>
