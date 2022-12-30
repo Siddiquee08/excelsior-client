@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, userProfile } = useContext(AuthContext);
   const [userInfo, setUserInfo] = useState({
     name: "",
     photo: "",
@@ -23,6 +23,15 @@ const Register = () => {
   const handlePhoto = (event) => {
     setUserInfo({ ...userInfo, photo: event.target.value });
   };
+  const handleUserProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
+    userProfile(profile)
+      .then(() => {})
+      .catch(() => {});
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -31,6 +40,7 @@ const Register = () => {
         const user = result.user;
         console.log(user);
         setError("");
+        handleUserProfile(userInfo.name, userInfo.photo);
       })
       .catch((error) => {
         setError(error.message);
