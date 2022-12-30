@@ -25,14 +25,18 @@ export const routes = createBrowserRouter([
         path: "/courses/:id",
         element: <Courses></Courses>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/coursesbyid/${params.id}`);
+          return fetch(
+            `https://excelsior-server.vercel.app/coursesbyid/${params.id}`
+          );
         },
       },
       {
         path: "/details/:id",
         element: <CourseDetails></CourseDetails>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/details/${params.id}`);
+          return fetch(
+            `https://excelsior-server.vercel.app/details/${params.id}`
+          );
         },
       },
       {
@@ -43,7 +47,9 @@ export const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/details/${params.id}`);
+          return fetch(
+            `https://excelsior-server.vercel.app/details/${params.id}`
+          );
         },
       },
       {
