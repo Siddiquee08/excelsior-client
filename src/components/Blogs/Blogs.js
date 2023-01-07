@@ -1,13 +1,13 @@
 import React from "react";
-import Accordion from "react-bootstrap/Accordion";
+import { Card } from "react-bootstrap";
 
 const Blogs = () => {
   return (
-    <div className="container text-center my-5">
-      <Accordion>
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>What is CORS?</Accordion.Header>
-          <Accordion.Body>
+    <div className=" container d-block my-2">
+      <Card className="d-flex m-1" border="light">
+        <Card.Body>
+          <Card.Title>What is CORS?</Card.Title>
+          <Card.Text>
             Cross-Origin Resource Sharing (CORS) is an HTTP-header based
             mechanism that allows a server to indicate any origins (domain,
             scheme, or port) other than its own from which a browser should
@@ -25,36 +25,41 @@ const Blogs = () => {
             APIs can only request resources from the same origin the application
             was loaded from unless the response from other origins includes the
             right CORS headers.
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card className="d-flex m-1" border="light">
+        <Card.Body>
+          <Card.Title>
+            {" "}
             Why are you using firebase? What other options do you have to
             implement authentication?
-          </Accordion.Header>
-          <Accordion.Body>
+          </Card.Title>
+          <Card.Text>
             Firebase Authentication aims to make building secure authentication
             systems easy, while improving the sign-in and onboarding experience
             for end users. It provides an end-to-end identity solution,
             supporting email and password accounts, phone auth, and Google,
             Twitter, Facebook, and GitHub login, and more. Other ways of
             authentications are Parse, Supabase, OKTA etc.
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="2">
-          <Accordion.Header>How does private route works?</Accordion.Header>
-          <Accordion.Body>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card className="d-flex m-1" border="light">
+        <Card.Body>
+          <Card.Title>How does private route works?</Card.Title>
+          <Card.Text>
             The react private route component renders child components
             (children) if the user is logged in. If not logged in the user is
             redirected to the /login page with the return url passed in the
             location state property.
-          </Accordion.Body>
-        </Accordion.Item>
-        <Accordion.Item eventKey="3">
-          <Accordion.Header>
-            What is Node and How does it work?
-          </Accordion.Header>
-          <Accordion.Body>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card className="d-flex m-1" border="light">
+        <Card.Body>
+          <Card.Title>What is Node and How does it work?</Card.Title>
+          <Card.Text>
             Node.js is a JavaScript runtime environment that achieves low
             latency and high throughput by taking a “non-blocking” approach to
             serving requests. In other words, Node.js wastes no time or
@@ -69,9 +74,9 @@ const Blogs = () => {
             than most competitive architectures that scale with threads,
             including Apache HTTP Server, the various Java application servers,
             IIS and ASP.NET, and Ruby on Rails.
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
