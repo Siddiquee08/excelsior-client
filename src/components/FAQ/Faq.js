@@ -6,69 +6,43 @@ const Faq = () => {
     <div className="container text-center my-5">
       <Accordion>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>What is CORS?</Accordion.Header>
+          <Accordion.Header>
+            What are the technology requirements to take an online course?
+          </Accordion.Header>
           <Accordion.Body>
-            Cross-Origin Resource Sharing (CORS) is an HTTP-header based
-            mechanism that allows a server to indicate any origins (domain,
-            scheme, or port) other than its own from which a browser should
-            permit loading resources. CORS also relies on a mechanism by which
-            browsers make a "preflight" request to the server hosting the
-            cross-origin resource, in order to check that the server will permit
-            the actual request. In that preflight, the browser sends headers
-            that indicate the HTTP method and headers that will be used in the
-            actual request. An example of a cross-origin request: the front-end
-            JavaScript code served from https://domain-a.com uses XMLHttpRequest
-            to make a request for https://domain-b.com/data.json. For security
-            reasons, browsers restrict cross-origin HTTP requests initiated from
-            scripts. For example, XMLHttpRequest and the Fetch API follow the
-            same-origin policy. This means that a web application using those
-            APIs can only request resources from the same origin the application
-            was loaded from unless the response from other origins includes the
-            right CORS headers.
+            You will need a computer, a high speed Internet connection, a newer
+            version of a web browser, and access to common tools and software
+            like word processors, email, etc. Some courses may have other
+            software or technology requirements as well.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1">
           <Accordion.Header>
-            Why are you using firebase? What other options do you have to
-            implement authentication?
+            Is it possible to earn a degree through the Excelsior Online
+            Learning program?
           </Accordion.Header>
-          <Accordion.Body>
-            Firebase Authentication aims to make building secure authentication
-            systems easy, while improving the sign-in and onboarding experience
-            for end users. It provides an end-to-end identity solution,
-            supporting email and password accounts, phone auth, and Google,
-            Twitter, Facebook, and GitHub login, and more. Other ways of
-            authentications are Parse, Supabase, OKTA etc.
-          </Accordion.Body>
+          <Accordion.Body>No.</Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2">
-          <Accordion.Header>How does private route works?</Accordion.Header>
+          <Accordion.Header>
+            How long do I have to complete a course?
+          </Accordion.Header>
           <Accordion.Body>
-            The react private route component renders child components
-            (children) if the user is logged in. If not logged in the user is
-            redirected to the /login page with the return url passed in the
-            location state property.
+            If you study 4-6 hourse regularly then all the courses can be
+            finished within 6 months.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
           <Accordion.Header>
-            What is Node and How does it work?
+            How do I contact my course instructor?
           </Accordion.Header>
           <Accordion.Body>
-            Node.js is a JavaScript runtime environment that achieves low
-            latency and high throughput by taking a “non-blocking” approach to
-            serving requests. In other words, Node.js wastes no time or
-            resources on waiting for I/O requests to return. It runs a
-            single-threaded event loop registered with the system to handle
-            connections, and each new connection causes a JavaScript callback
-            function to fire. The callback function can handle requests with
-            non-blocking I/O calls, and if necessary can spawn threads from a
-            pool to execute blocking or CPU-intensive operations and to
-            load-balance across CPU cores. Node’s approach to scaling with
-            callback functions requires less memory to handle more connections
-            than most competitive architectures that scale with threads,
-            including Apache HTTP Server, the various Java application servers,
-            IIS and ASP.NET, and Ruby on Rails.
+            Instructors stay in touch with their Online Learning students in a
+            variety of ways, depending on the course design. Your instructor
+            will explain the best way to reach him or her within the course home
+            pages. You may communicate with your instructor through discussion
+            groups, bulletin boards, chat rooms, assignment submissions, through
+            email, or by telephone.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
