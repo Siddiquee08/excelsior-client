@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 const Register = () => {
+  const navigate = useNavigate();
   const { createUser, userProfile } = useContext(AuthContext);
   const [userInfo, setUserInfo] = useState({
     name: "",
@@ -38,9 +40,14 @@ const Register = () => {
     createUser(userInfo.email, userInfo.password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        setError("");
-        handleUserProfile(userInfo.name, userInfo.photo);
+        if (user) {
+          navigate("/");
+          console.log(user);
+          setError("");
+          handleUserProfile(userInfo.name, userInfo.photo);
+        } else {
+          return error;
+        }
       })
       .catch((error) => {
         setError(error.message);
