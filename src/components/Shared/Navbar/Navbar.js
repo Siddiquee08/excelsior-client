@@ -35,7 +35,7 @@ const Navigationbar = () => {
             />
           </Link>
 
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <Link to="/" className="text-white">
               Excelsior
             </Link>
@@ -43,24 +43,24 @@ const Navigationbar = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">
+              <Nav.Link>
                 <Link to="/courses/:id" className="text-white">
                   Courses
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#pricing" className="text-white">
+              <Nav.Link className="text-white">
                 <Link to="/faq" className="text-white">
                   FAQ
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#blogs">
+              <Nav.Link>
                 <Link to="/blogs" className="text-white" href="#">
                   Blogs
                 </Link>
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#upcoming">
+              <Nav.Link>
                 <Link to="/upcoming" className="text-white">
                   Upcoming
                 </Link>
