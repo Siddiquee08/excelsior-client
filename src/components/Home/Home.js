@@ -26,12 +26,12 @@ const Home = () => {
             autoplay
           ></lottie-player>
         </div>
-        <div className="w-100 mt-4">
+        <div className="w-100 text-center">
           <h2 className="fs-3">
             Learn in- demand skills and{" "}
             <span className="text-success">{text}</span>
           </h2>
-          <Button className="ms-3">
+          <Button className="ms-3 mt-2">
             <Link to="/courses/:id" className="text-decoration-none text-white">
               Start Learning
             </Link>
