@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useTypewriter } from "react-simple-typewriter";
+import "./Home.css";
 
 const Home = () => {
   const [text] = useTypewriter({
@@ -37,7 +38,7 @@ const Home = () => {
           </Button>
         </div>
       </div>
-      <div className="container my-3">
+      <div className="container  my-3">
         <div className="text-center">
           <h1>Benefits of joining Excelsior</h1>
           <p>
@@ -46,7 +47,7 @@ const Home = () => {
             successful, rewarding career.
           </p>
         </div>
-        <div className="d-md-flex">
+        <div className="banner container">
           <div className="m-1">
             <h3>Get promoted, become top 10%</h3>
             <p>

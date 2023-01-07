@@ -1,0 +1,15 @@
+.banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: justify;
+    gap: 2rem;
+    background-color: rgba(245, 247, 245, 0.2);
+}
+@media  (max-width: 770px) {
+.banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        text-align: center;
+    }
+}
