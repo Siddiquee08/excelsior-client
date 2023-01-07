@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const LeftSideMenu = ({ category }) => {
   const { id, name } = category;
   return (
-    <div className="mt-3 ms-2 d-inline d-lg-block">
-      <Button variant="success m-1">
+    <div className="d-inline d-lg-block">
+      <Button variant="success me-1 mb-2 py-3" style={{ width: "32vh" }}>
         <Link to={`/courses/${id}`} className="text-white text-decoration-none">
           {name}
         </Link>

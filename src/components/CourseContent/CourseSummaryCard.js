@@ -6,9 +6,14 @@ import "./Courses.css";
 const CourseSummaryCard = ({ course }) => {
   const { _id, title, description, picture } = course;
   return (
-    <div className="mt-3 summary">
-      <Card className="me-2">
-        <Card.Img variant="top" src={picture} style={{ height: "30vh" }} />
+    <div>
+      <Card className="m-1">
+        <Card.Img
+          className="p-1"
+          variant="top"
+          src={picture}
+          style={{ height: "30vh" }}
+        />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>

@@ -109,7 +109,7 @@ const Navigationbar = () => {
                 variant={theme ? "light" : "dark"}
                 onClick={toggle}
                 className={theme ? "bg-white" : "bg-warning"}
-                style={{ borderRadius: "25px" }}
+                style={{ borderRadius: "25px", display: "none" }}
               >
                 {theme ? "Light" : "Dark"}
               </Button>

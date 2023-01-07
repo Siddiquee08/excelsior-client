@@ -15,19 +15,18 @@ const Home = () => {
   });
   return (
     <div>
-      <div className=" container d-md-flex mt-2 align-items-center justify-content-center">
-        <div className="mt-2">
+      <div className=" container d-md-flex mt-2 align-items-center justify-content-center flex-row-reverse">
+        <div className="">
           <lottie-player
             src="https://assets9.lottiefiles.com/packages/lf20_9ungcrzx.json"
             background="transparent"
             speed="1"
-            style={{ height: "400px" }}
             loop
             autoplay
           ></lottie-player>
         </div>
-        <div className="">
-          <h2 className="fs-1 mt-5">
+        <div className="w-100 mt-2">
+          <h2 className="fs-3">
             Learn in- demand skills and{" "}
             <span className="text-success">{text}</span>
           </h2>
